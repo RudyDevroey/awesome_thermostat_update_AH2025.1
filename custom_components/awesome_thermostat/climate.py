@@ -8,13 +8,13 @@ import voluptuous as vol
 from homeassistant.components.climate import PLATFORM_SCHEMA, ClimateEntity
 from homeassistant.components.climate.const import (
     ATTR_PRESET_MODE,
-    CURRENT_HVAC_COOL,
-    CURRENT_HVAC_HEAT,
-    CURRENT_HVAC_IDLE,
-    CURRENT_HVAC_OFF,
-    HVAC_MODE_COOL,
-    HVAC_MODE_HEAT,
-    HVAC_MODE_OFF,
+    HVACAction.COOLING,
+    HVACAction.HEATING,
+    HVACAction.IDLE,
+    HVACAction.OFF,
+    HVACMode.COOL,
+    HVACMode.HEAT,
+    HVACMode.OFF,
     PRESET_ACTIVITY,
     PRESET_AWAY,
     PRESET_BOOST,
@@ -23,8 +23,8 @@ from homeassistant.components.climate.const import (
     PRESET_HOME,
     PRESET_NONE,
     PRESET_SLEEP,
-    SUPPORT_PRESET_MODE,
-    SUPPORT_TARGET_TEMPERATURE,
+    ClimateEntityFeature.PRESET_MODE,
+    ClimateEntityFeature.TARGET_TEMPERATURE,
 )
 from homeassistant.const import (
     ATTR_ENTITY_ID,
